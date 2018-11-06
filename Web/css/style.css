@@ -1,0 +1,283 @@
+@font-face{
+    font-family: "Dream Attack Grotesk";
+    src: url("Dream\ Attack\ Grotesk.otf");
+}
+
+body{
+    font-family: 'Dream Attack Grotesk', sans-serif;
+}
+
+.btn-floating{
+    background-color: #01D3F6;
+}
+
+.btn-floating:hover{
+    background-color: #01BDDC;
+}
+
+[type="radio"]:checked + span::after, [type="radio"].with-gap:checked + span::after {
+    background-color: #01D3F6;
+}
+
+.card .card-action a:not(.btn):not(.btn-large):not(.btn-small):not(.btn-large):not(.btn-floating){
+    color: #01D3F6;
+}
+
+#categorias .col{
+    padding: 1px !important;
+}
+
+
+.category{
+    position: relative;
+    padding: 40px;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14),0 3px 1px -2px rgba(0,0,0,0.12),0 1px 5px 0 rgba(0,0,0,0.2);
+    transition: .4s ;
+}
+
+.category .image img{
+    position: relative;
+    top: 20%;
+    left: -12px;
+    height: 100px;
+    width: 100px;
+}
+
+.category:hover > .image  #data path{
+    fill: #FFF !important;
+}
+
+.category .content span{
+    color: #F9034F;
+    justify-content: center;
+}
+
+nav{
+    background: #01D3F6;
+}
+
+#back{
+    color: #01D3F6;
+}
+
+
+p{
+    font-size: 30px;
+    color: #F9034F;
+    padding: 10px;
+}
+
+blockquote{
+    border-left: 5px solid #F9034F;
+}
+
+span.badge.new{
+    background-color: #F9034F;
+}
+
+.pagination li.active{
+    background-color: #01D3F6
+}
+
+.slider .indicators .indicator-item.active{
+    background: #01D3F6;
+}
+
+.page-footer{
+    background: #F9034F;
+}
+
+th{
+    color: #F9034F;
+}
+ /* label color */
+.input-field label {
+    color: #F9034F;
+}
+  
+.input-field input[type=email]:focus + label,.input-field input[type=text]:focus + label, .input-field input[type=number]:focus + label, .input-field input[type=date]:focus + label, .input-field input[type=file]:focus + label{
+    color: #F9034F;
+}
+  
+.input-field input[type=password]:focus,.input-field input[type=email]:focus, .input-field input[type=text]:focus, .input-field input[type=number]:focus, .input-field input[type=date]:focus, .input-field input[type=file]:focus {
+    border-bottom: 1px solid #01D3F6 !important;
+    box-shadow: 0 1px 0 0 #FFF;
+}
+  
+.input-field .prefix.active {
+    color: #01D3F6;
+}
+
+.btn, .btn-large, .btn-small {
+    background-color: #01D3F6;
+    color: #FFF;
+}
+ 
+.btn:hover, .btn-large:hover, .btn-small:hover {
+    background-color: #01BDDC;
+}
+ 
+.tabs .tab a{
+    color:#01D3F6;
+} 
+
+.tabs .tab a:hover {
+    background-color:#01BDDC;
+    color:#FFF;
+} 
+
+.tabs .tab a.active {
+    background-color:#01BDDC;
+    color:#01D3F6;
+} 
+
+.tabs .indicator {
+    background-color:#01D3F6;
+}
+
+.boton {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    -webkit-box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.3);
+    box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.3);
+}
+
+.boton img {
+    width: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+
+.boton .overlay .name span{
+    font-size: 15px;
+    display: inline-block;
+    right: -20px;
+    position: relative;
+    text-align: left;
+    text-decoration: none;   
+}
+
+.boton .overlay .text span{
+    font-size: 14px;
+    display: inline-block;
+    right: -65%;
+    bottom: -20px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+}
+
+
+.boton .overlay {
+    background: rgba(0, 0, 0, 0.5);
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    opacity: 0;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+.boton .botones {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.boton .botones .fa {
+    background: #01D3F6; 
+    -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    display: inline-block;
+    line-height: 54px;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    width: 40px;
+    height: 40px;
+    opacity: 0;
+    -webkit-transform: scale(5);
+    -moz-transform: scale(5);
+    -ms-transform: scale(5);
+    -o-transform: scale(5);
+    transform: scale(5);
+    position: relative;
+    -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+    -moz-transition: -moz-transform 0.3s, opacity 0.3s;
+    -o-transition: -o-transform 0.3s, opacity 0.3s;
+    transition: transform 0.3s, opacity 0.3s;
+    color: rgba(50, 50, 50, 0.9);
+}
+
+
+.boton:hover .botones .fa {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+}
+
+.boton:hover .overlay {
+    opacity: 1;
+}
+
+.search-box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #2f2f2f;
+    height: 40px;
+    border-radius: 40px;
+    padding: 10px; 
+}
+
+.search-btn{
+    color: crimson;
+    float: right;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #2f2f2f;
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+}
+
+.search-box:hover > .search-text{
+    width: 240px;
+    padding: 0 6px;
+}
+
+
+.search-text{
+    border: none;
+    background: none;
+    outline: none;
+    float: left;
+    padding:0;
+    color: white;
+    font-size: 16px;
+    transition: 0.4s;
+    line-height: 40px;
+    width: 0px;
+}
+
