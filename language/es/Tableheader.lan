@@ -1,0 +1,64 @@
+<?php $Tableheaders = array(
+    '.' => '#',
+	
+    //Tablas: Paises y ciudades
+    'PAISID'=>'Id',
+	'PAISNOMB'=>'Nombre',
+	
+	'CIUDID'=>'Id',
+	'CIUDNOMB'=>'Ciudad',
+	'PAISNOMB'=>'Pais',
+	'PAISID_FK' => 'Pais',
+	
+	//Tabla: Comandos 
+    'COMAID' => 'Comando',
+	'COMANOMB' => 'Nombre',
+	'COMADESC' => 'Descripci&oacute;n',
+	
+
+
+    //Tabla: Interfaces
+    'INTEID' => 'Interfaz',
+	'INTENOMB' => 'Nombre',
+	'INTEDESC' => 'Descripci&oacute;n',
+	
+	//Modificado por Daniel Lopez Tabla: Intecoma
+    'INTECOMAID' => 'Comando Id',
+	'INTEID_FK' => 'Interfaz',
+	'COMAID_FK' => 'Comando',	
+
+	//Tabla: Roles 
+    'ROLID' => 'Rol',
+	'ROLNOMB' => 'Nombre',	
+
+	//Tabla: RolInte
+    'ROLINTEID' => 'Id Rol',
+	'ROLID_FK' => 'Rol',
+	'INTECOMAID_FK' => 'Comandos por Interfaz',
+	
+	//Tabla: Tipos y Tipo 
+	'TIPOID' => 'Tipo',
+	'TIPONOMB' => 'Nombre Tipo',
+    'TIPOSID' => 'Tipos',
+    'TIPOID_FK' => 'Tipo',
+    'TIPOSDESC' => 'Descripcion de Tipos',
+    'TIPOVALO' => 'Valor de Tipo',	
+	
+	//Tabla: Usuarios
+	'USUAID' => 'Id',
+	'USUANOM' => 'Nombres',
+	'USUAAPEL' => 'Apellidos',
+	'USUATELE' => 'Tel&eacute;fono',
+	'USUAIDENT' => 'N&uacute;mero de identificaci&oacute;n',
+	'USUADIRE' => 'Direcci&oacute;n',
+	'USUAEMAI' => 'E-MAIL',
+	'USUAPASS' => 'Contrase&ntilde;a',
+	'USUAESTA' => 'Estado',
+	'USUAROL' => 'Rol Usuario',
+	'USUACIU' => 'Ciudad',
+	'USUATIID' => 'Tipo Identificaci&oacute;n',
+
+
+
+);
+?>

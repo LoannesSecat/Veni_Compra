@@ -1,0 +1,149 @@
+[detalleinventa]
+TITLE =Administracion(CRUD) of Detalleinventa
+TITLECONSULT =Consulta Maestra de Detalleinventa
+DIN_ID = Din_id
+PDU_ID = Pdu_id
+INV_ID = Inv_id
+DIN_LOTE = Din_lote
+DIN_CANTIDAD = Din_cantidad
+DIN_PRECIOVENTA = Din_precioventa
+DIN_FECHA_CADU = Din_fecha_cadu
+DIN_EXIS_BIEN = Din_exis_bien
+DIN_EXIS_MAL = Din_exis_mal
+DIN_DEVOL_COMP = Din_devol_comp
+DIN_DEVOL_VENT = Din_devol_vent
+[dominios]
+TITLE =Administracion(CRUD) of Dominios
+TITLECONSULT =Consulta Maestra de Dominios
+DOM_ID = Dom_id
+DOM__NOMBRE = Dom__nombre
+DOM_USO = Dom_uso
+[mco_comprasdeta]
+TITLE =Administracion(CRUD) of Mco_comprasdeta
+TITLECONSULT =Consulta Maestra de Mco_comprasdeta
+CDE_ID = Cde_id
+CDE_CANTIDAD = Cde_cantidad
+CDE_PRECIOCOMPR = Cde_preciocompr
+COP_ID = Cop_id
+PDU_ID = Pdu_id
+[mco_comprasprov]
+TITLE =Administracion(CRUD) of Mco_comprasprov
+TITLECONSULT =Consulta Maestra de Mco_comprasprov
+COP_ID = Cop_id
+COP_FECHACOMPRA = Cop_fechacompra
+COP_TOTALCOMPRA = Cop_totalcompra
+USU_ID = Usu_id
+PVE_ID = Pve_id
+[mco_inventario]
+TITLE =Administracion(CRUD) of Mco_inventario
+TITLECONSULT =Consulta Maestra de Mco_inventario
+INV_ID = Inv_id
+INV_NOMBRE = Inv_nombre
+[mco_producpromo]
+TITLE =Administracion(CRUD) of Mco_producpromo
+TITLECONSULT =Consulta Maestra de Mco_producpromo
+PPM_ID = Ppm_id
+PDU_ID = Pdu_id
+PPM_FECHAINI = Ppm_fechaini
+PPM_FECHAFIN = Ppm_fechafin
+PPM_PRECIOPROM = Ppm_precioprom
+[mco_productos]
+TITLE =Administracion(CRUD) of Mco_productos
+TITLECONSULT =Consulta Maestra de Mco_productos
+PDU_ID = Pdu_id
+PDU_NOMBRE = Pdu_nombre
+PDU_DESCRIPCION = Pdu_descripcion
+PDU_IMAGENPRODU = Pdu_imagenprodu
+PDU_STOCKMINIMO = Pdu_stockminimo
+SUB_NOMBRECAT = Sub_nombrecat
+SUB_UNIMEDIDA = Sub_unimedida
+SUB_TALLA = Sub_talla
+SUB_GENERO = Sub_genero
+SUB_ESTADO = Sub_estado
+[mco_proveedores]
+TITLE =Administracion(CRUD) of Mco_proveedores
+TITLECONSULT =Consulta Maestra de Mco_proveedores
+PVE_ID = Pve_id
+PVE_NOMBRE = Pve_nombre
+PVE_DIRECCION = Pve_direccion
+PVE_TELEFONO = Pve_telefono
+PVE_CELULAR = Pve_celular
+PVE_EMAIL = Pve_email
+[mga_garantias]
+TITLE =Administracion(CRUD) of Mga_garantias
+TITLECONSULT =Consulta Maestra de Mga_garantias
+GAR_ID = Gar_id
+GAR_DESCRIPDEVO = Gar_descripdevo
+GAR_CANTIDAD = Gar_cantidad
+GAR_FOTOESTADO = Gar_fotoestado
+GAR_FECHASOLICI = Gar_fechasolici
+SUB_ESTADO = Sub_estado
+SUB_RESPUESTA = Sub_respuesta
+PDU_ID = Pdu_id
+FAC_ID = Fac_id
+[mus_comanper]
+TITLE =Administracion(CRUD) of Mus_comanper
+TITLECONSULT =Consulta Maestra de Mus_comanper
+COP_ID = Cop_id
+COP_NOMBRE = Cop_nombre
+[mus_interfcoman]
+TITLE =Administracion(CRUD) of Mus_interfcoman
+TITLECONSULT =Consulta Maestra de Mus_interfcoman
+ITC_ID = Itc_id
+MUS_COMANPER_COP_ID = Mus_comanper_cop_id
+MUS_INTERPERM_INP_ID = Mus_interperm_inp_id
+[mus_interperm]
+TITLE =Administracion(CRUD) of Mus_interperm
+TITLECONSULT =Consulta Maestra de Mus_interperm
+INP_ID = Inp_id
+INP_NOMBRE = Inp_nombre
+[mus_roles]
+TITLE =Administracion(CRUD) of Mus_roles
+TITLECONSULT =Consulta Maestra de Mus_roles
+ROL_ID = Rol_id
+ROL_NOMBRE = Rol_nombre
+[mus_rolinfcom]
+TITLE =Administracion(CRUD) of Mus_rolinfcom
+TITLECONSULT =Consulta Maestra de Mus_rolinfcom
+RIC_ID = Ric_id
+MUS_INTERFCOMAN_ITC_ID = Mus_interfcoman_itc_id
+MUS_ROLES_ROL_ID = Mus_roles_rol_id
+[mus_usuarios]
+TITLE =Administracion(CRUD) of Mus_usuarios
+TITLECONSULT =Consulta Maestra de Mus_usuarios
+USU_ID = Usu_id
+USU_NOMBRE = Usu_nombre
+USU_APELLIDO = Usu_apellido
+USU_FECHA_NACI = Usu_fecha_naci
+USU_DIRECCION = Usu_direccion
+USU_EMAIL = Usu_email
+USU_CELULAR = Usu_celular
+USU_CONTRASENA = Usu_contrasena
+SUB_SEXO = Sub_sexo
+ROL_ID = Rol_id
+[mve_facturas]
+TITLE =Administracion(CRUD) of Mve_facturas
+TITLECONSULT =Consulta Maestra de Mve_facturas
+FAC_ID = Fac_id
+FAC_FECHACOMPRA = Fac_fechacompra
+FAC_TOTAL = Fac_total
+SUB_TIPOPAGO = Sub_tipopago
+USU_ID = Usu_id
+[mve_facturasdet]
+TITLE =Administracion(CRUD) of Mve_facturasdet
+TITLECONSULT =Consulta Maestra de Mve_facturasdet
+FDE_ID = Fde_id
+FDE_CANTIDAD = Fde_cantidad
+FDE_PRECIOUNITA = Fde_preciounita
+FAC_ID = Fac_id
+PDU_ID = Pdu_id
+PPM_ID = Ppm_id
+[subdominios]
+TITLE =Administracion(CRUD) of Subdominios
+TITLECONSULT =Consulta Maestra de Subdominios
+SUB_ID = Sub_id
+DOMINIOS_DOM_ID = Dominios_dom_id
+SUB_VALOR = Sub_valor
+SUB_DESCRIPCION = Sub_descripcion
+SUB_AUX1 = Sub_aux1
+SUB_AUX2 = Sub_aux2

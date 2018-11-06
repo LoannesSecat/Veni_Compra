@@ -1,0 +1,33 @@
+<?php 
+$Toolsbar = array(
+    'save' => 'Guardar',
+    'new' => 'Nuevo',
+    'back' => 'Atras',
+    'del' => 'Borrar',
+    'help' => 'Ayuda',
+    'edit' => 'Editar',
+    'close' => 'Cerrar',
+    'refresh' => 'Refrescar',
+    'condiction' => 'Condicion',
+    'KeyWord' => 'Palabra Clave',
+    'Filterby' => 'Filtrar Por',
+    'ExactPhrase' => 'Frase Exacta',
+    'Diff' => 'Diferente',
+    'BeginWith' => 'Comienza Por',
+    'EndWith' => 'Finaliza En',
+    'Content' => 'Contiene',
+    'find' => 'Buscar',
+    'Ajustes' => 'Opcion Ajustes',
+    'Intecoma' => 'Opcion Interfaces X Comandos',
+    'Interfaces' => 'Opcion Interfaces',
+    'Roles' => 'Opcion Roles',
+    'Rolinte' => 'Opcion Rol X Interface',
+    'Tipo' => 'Maestra Parametros',
+    'Tipos' => 'Parametros',
+    'Usuarios' => 'Opcion Usuarios',
+    'Categoria' => 'Categorias',
+    'Usuario' => 'Usuarios',
+    'Configuracion' => 'Configuraciones',
+	
+);
+?>
