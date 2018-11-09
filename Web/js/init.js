@@ -11,11 +11,15 @@ $(document).ready(function () {
     $("#search-icon").click(function(e){
         $('#nav-mobile').hide();
         $('#logo').hide();
+        $('#search-icon-s').hide(); 
         $("#bar-search").fadeIn();
         $("#search-txt").focus();
     });
     $("#search-icon-s").click(function (e) {
         $('#nav-mobile').hide();
+        $('#buscarl').hide();
+        
+        $('#search-icon').hide();
         $('#logo').hide();
         $("#bar-search").fadeIn();
         $("#search-txt").focus();
