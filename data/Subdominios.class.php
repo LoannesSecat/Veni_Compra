@@ -24,7 +24,7 @@ class Subdominios
 	* Metodo constructor de la clase
 	* @author SpyroFrameWork
 	*/
- function Subdominios()
+ function __construct()
  {
    $this->connection = Application::getDatabaseConnection();
    $this->connection->SetFetchMode(2);
@@ -257,5 +257,22 @@ class Subdominios
   return $this->connection->GetAll($sql);
 }
 
+
+/**
+	* Metodo para consultar los productos
+	* @author SpyroFrameWork
+	* @return array
+	*/
+ function getAllCategorias()
+ {
+
+   $sql="SELECT sub_id, 
+   				sub_valor, 
+   				sub_aux1 
+   		FROM subdominios 
+   		WHERE Dominios_dom_id = 8";
+       //print_r($sql);
+    return $this->connection->GetAll($sql);
+}
 
 }?>

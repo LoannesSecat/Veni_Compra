@@ -24,7 +24,7 @@ class Mco_productos
 	* Metodo constructor de la clase
 	* @author SpyroFrameWork
 	*/
- function Mco_productos()
+ function __construct()
  {
    $this->connection = Application::getDatabaseConnection();
    $this->connection->SetFetchMode(2);
@@ -305,5 +305,29 @@ class Mco_productos
   return $this->connection->GetAll($sql);
 }
 
+
+	/**
+	* Metodo para consultar los productos
+	* @author SpyroFrameWork
+	* @return array
+	*/
+ function getAllProductsCategoria($SUB_CAT)
+ {
+
+ if ($SUB_CAT == 0)
+ 	$condiction ="";
+ else
+ 	$condiction ="AND p.sub_nombreCat = $SUB_CAT";
+   $sql="SELECT p.pdu_id,
+                p.pdu_nombre,
+                p.pdu_imagenProdu,
+              	d.din_precioVenta
+       FROM mco_productos p, 
+            detalleinventa d 
+       WHERE  p.pdu_id = d.pdu_id
+       $condiction";
+       //print_r($sql);
+    return $this->connection->GetAll($sql);
+}
 
 }?>

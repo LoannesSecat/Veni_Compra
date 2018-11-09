@@ -17,7 +17,7 @@
     require_once "Serializer.class.php";
 
     $Navigation_config = array(
-        'default_action' => 'CmdDefaultLogin', 
+        'default_action' => 'CmdPaginaInicialUsu', 
         'default_action_CHROME' => 'default_CHROME',
         'error_view' => 'CmdDefaultError',
         'login_view' => 'Login',
@@ -28,110 +28,125 @@
                 'validated' => 'false',
                 'views' => array(
                     'success' => array(
-                        'view' => 'Form_Wellcome.tpl',
+                        'view' => 'usuario_index.html',
                         'redirect' => 0
                     )
                 )
             ),
 
         //Comando por defecto ejemplo de uso de Smarty Engine
-            'CmdDefaultSample' => array(
-                'class' => 'CmdDefaultSample',
+            'CmdPaginaInicialUsu' => array(
+                'class' => 'CmdPaginaInicialUsu',
                 'validated' => 'false',
                 'views' => array(
                     'success' => array(
-                        'view' => 'Form_Default_Sample.tpl',
+                        'view' => 'usuario_index.html',
                         'redirect' => 0
                     )
                 )
             ),
 
         //Comando por defecto cuando no se esta usando Chrome
-            'default_CHROME' => array(
-                'class' => 'default_CHROME',
+            'CmdCuentaUsu' => array(
+                'class' => 'CmdCuentaUsu',
                 'validated' => 'false',
                 'views' => array(
                     'success' => array(
-                        'view' => 'Form_Default_Chrome.tpl',
+                        'view' => 'cuenta.html',
                         'redirect' => 0
                     )
                 )
             ),
 
-            'CmdDefaultHome' => array(
-                'class' => 'CmdDefaultHome',
+            'CmdFactura' => array(
+                'class' => 'CmdFactura',
                 'validated' => 'false',
                 'views' => array(
                     'success' => array(
-                        'view' => 'Form_Dashboard.tpl',
+                        'view' => 'factura.html',
                         'redirect' => 0
                     )
                 )
             ),		
 
-            'CmdDefaultLogin' => array(
-                'class' => 'CmdDefaultLogin',
+            'CmdReportarUsu' => array(
+                'class' => 'CmdReportarUsu',
                 'validated' => 'false',
                 'views' => array(
                     'success' => array(
-                        'view' => 'Form_Login.tpl',
+                        'view' => 'reportar.html',
                         'redirect' => 0
                     )
                 )
             ),		
 
-
-        // Desarrollado por Kevin Villa - Direccion de interfaz
-            'CmdDefaultError' => array(
-                'class' => 'CmdDefaultError',
+            'CmdCarritoUsu' => array(
+                'class' => 'CmdCarritoUsu',
                 'validated' => 'false',
-                'desc' => 'Cargar Forma Error',
+                'desc' => 'Carga el carrito de compras',
                 'views' => array(
                     'success' => array(
-                        'view' => 'Form_Error.tpl',
+                        'view' => 'carrito.html',
                         'redirect' => 0
                     )
                 )
             ),		
-        // Desarrollado por Kevin Villa - Tabla: Usuario
-            'CmdLogin' => array(
-                'class' => 'CmdLogin',
+
+            'CmdSalirUsu' => array(
+                'class' => 'CmdSalirUsu',
                 'validated' => 'false',
-                'desc' => 'Inicio de sesion',
+                'desc' => 'Salir de la sesion',
                 'views' => array(
                     'success' => array(
-                        'view' => 'Form_HomeAdmin.tpl',
-                        'redirect' => 0
-                    ),
-                    'fail' => array(
-                        'view' => 'Form_Login.tpl',
+                        'view' => 'index.html',
                         'redirect' => 0
                     )
                 )
             ),
+
         // Desarrollado por Anderson Alban
-            'CmdRegister' => array(
-                'class' => 'CmdRegister',
+            'CmdVerPromociones' => array(
+                'class' => 'CmdVerPromociones',
                 'validated' => 'false',
-                'desc' => 'Adicionar un usuario',
+                'desc' => 'Ver las promociones vigentes',
                 'views' => array(
                     'success' => array(
-                        'view' => 'Form_Login.tpl',
-                        'redirect' => 0
-                    ),
-                    'fail' => array(
-                        'view' => 'Form_Register.tpl',
+                        'view' => 'promociones.html',
                         'redirect' => 0
                     )
                 )
             ),
 
-            'CmdDefaultRegister' => array(
-                'class' => 'CmdDefaultRegister',
+            'CmdComprarUsu' => array(
+                'class' => 'CmdComprarUsu',
+                'validated' => 'false',
+                'desc' => 'Realizar la compra',
+                'views' => array(
+                    'success' => array(
+                        'view' => 'generar.html',
+                        'redirect' => 0
+                    )
+                )
+            ),
+
+            'CmdVerCategorias' => array(
+                'class' => 'CmdVerCategorias',
+                'validated' => 'false',
+                'desc' => 'Ver todas las categorias',
+                'views' => array(
+                    'success' => array(
+                        'view' => 'resultados.html',
+                        'redirect' => 0
+                    )
+                )
+            ),
+
+            'CmdProductoDesc' => array(
+                'class' => 'CmdProductoDesc',
                 'validated' => 'false',
                 'views' => array(
                     'success' => array(
-                        'view' => 'Form_Register.tpl',
+                        'view' => 'producto.html',
                         'redirect' => 0
                     )
                 )
