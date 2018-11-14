@@ -12,6 +12,7 @@ define("ERROR_DATO_EXISTE", 101);
 define("ERROR_DATO_NO_EXISTE", 102);
 define("EXITO_OPERACION_REALIZADA", 103);
 define("ERROR_OPERACION_NO_REALIZADA", 105);
+define("ERROR_EMAIL_EXISTE",106);
 
 /**
  *
@@ -34,6 +35,39 @@ class Mco_proveedoresManager
     {
      $this->gateway = Application::getDataGateway("mco_proveedores");
    }
+
+
+        /**
+    * Metodo para validar la existencia del correo del usuario
+    * @author SpyroFrameWork
+    * @return integer
+    */
+    function existeEmailProveedor($email)
+    {
+    	if($this->gateway->existeEmailProveedor($email) == 1){ 
+        return ERROR_EMAIL_EXISTE;
+      }
+      else
+      {
+        return EXITO_OPERACION_REALIZADA;
+      }
+    }
+
+       /**
+    * Metodo para validar la existencia de el usuario
+    * @author SpyroFrameWork
+    * @return integer
+    */
+    function existeProveedor($codigo)
+    {
+    	if($this->gateway->existMco_proveedores($codigo) == 1){ 
+        return ERROR_DATO_EXISTE;
+      }
+      else
+      {
+        return EXITO_OPERACION_REALIZADA;
+      }
+    }
 
     /**
     * Metodo para adicionar datos a la tabla: mco_proveedores

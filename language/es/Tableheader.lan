@@ -1,64 +1,153 @@
-<?php $Tableheaders = array(
-    '.' => '#',
-	
-    //Tablas: Paises y ciudades
-    'PAISID'=>'Id',
-	'PAISNOMB'=>'Nombre',
-	
-	'CIUDID'=>'Id',
-	'CIUDNOMB'=>'Ciudad',
-	'PAISNOMB'=>'Pais',
-	'PAISID_FK' => 'Pais',
-	
-	//Tabla: Comandos 
-    'COMAID' => 'Comando',
-	'COMANOMB' => 'Nombre',
-	'COMADESC' => 'Descripci&oacute;n',
-	
+<?php $Tableheaders = array (
+
+'.' => '#',
+
+//Tabla: Detalle inventario	
+	'DIN_ID' => 'Codigo',
+	'PDU_ID' => 'Codigo Producto',
+	'INV_ID' => 'Codigo Inventario',
+	'DIN_LOTE' => 'Codigo Lote',
+	'DIN_CANTIDAD' => 'Cantidad Producto',
+	'DIN_PRECIOVENTA' => 'Precio en venta',
+	'DIN_FECHA_CADU' => 'Fecha de vencimiento',
+	'DIN_EXIS_BIEN' => 'Existencia Buenos',
+	'DIN_EXIS_MAL' => 'Existencia Malos',
+	'DIN_DEVOL_COMP' => 'Cant. Devueltos al Prove.',
+	'DIN_DEVOL_VENT' => 'Cant. Devueltos del Clien.',
 
 
-    //Tabla: Interfaces
-    'INTEID' => 'Interfaz',
-	'INTENOMB' => 'Nombre',
-	'INTEDESC' => 'Descripci&oacute;n',
-	
-	//Modificado por Daniel Lopez Tabla: Intecoma
-    'INTECOMAID' => 'Comando Id',
-	'INTEID_FK' => 'Interfaz',
-	'COMAID_FK' => 'Comando',	
-
-	//Tabla: Roles 
-    'ROLID' => 'Rol',
-	'ROLNOMB' => 'Nombre',	
-
-	//Tabla: RolInte
-    'ROLINTEID' => 'Id Rol',
-	'ROLID_FK' => 'Rol',
-	'INTECOMAID_FK' => 'Comandos por Interfaz',
-	
-	//Tabla: Tipos y Tipo 
-	'TIPOID' => 'Tipo',
-	'TIPONOMB' => 'Nombre Tipo',
-    'TIPOSID' => 'Tipos',
-    'TIPOID_FK' => 'Tipo',
-    'TIPOSDESC' => 'Descripcion de Tipos',
-    'TIPOVALO' => 'Valor de Tipo',	
-	
-	//Tabla: Usuarios
-	'USUAID' => 'Id',
-	'USUANOM' => 'Nombres',
-	'USUAAPEL' => 'Apellidos',
-	'USUATELE' => 'Tel&eacute;fono',
-	'USUAIDENT' => 'N&uacute;mero de identificaci&oacute;n',
-	'USUADIRE' => 'Direcci&oacute;n',
-	'USUAEMAI' => 'E-MAIL',
-	'USUAPASS' => 'Contrase&ntilde;a',
-	'USUAESTA' => 'Estado',
-	'USUAROL' => 'Rol Usuario',
-	'USUACIU' => 'Ciudad',
-	'USUATIID' => 'Tipo Identificaci&oacute;n',
+//Tabla: Dominios
+	'DOM_ID' => 'Codigo',
+	'DOM__NOMBRE' => 'Nombre Dominio',
+	'DOM_USO' => 'Posibles Usos',
 
 
+//Tabla: Compras detalles
+	'CDE_ID' => 'Codigo',
+	'CDE_CANTIDAD' => 'Cantidad Comprados',
+	'CDE_PRECIOCOMPR' => 'Precio de Compra',
 
-);
+
+//Tabla: Compras Proveedores
+	'COP_ID' => 'Codigo de la Compra al Prove.',
+	'PDU_ID' => 'Codigo Producto',
+	'COP_ID' => 'Codigo',
+	'COP_FECHACOMPRA' => 'Fecha de compra',
+	'COP_TOTALCOMPRA' => 'Valor Total',
+	'USU_ID' => 'Usuario que compro',
+	'PVE_ID' => 'Proveedor responsable',
+
+
+//Tabla: Inventario
+	'INV_ID' => 'Cofdigo',
+	'INV_NOMBRE' => 'Nombre del Inventario',
+
+
+//Tabla: Productos en promoción
+	'PPM_ID' => 'Codigo',
+	'PDU_ID' => 'Codigo Producto',
+	'PPM_FECHAINI' => 'Inicio de promoción',
+	'PPM_FECHAFIN' => 'Fin de promoción',
+	'PPM_PRECIOPROM' => 'Precio promoción',
+
+
+//Tabla: Productos
+	'PDU_ID' => 'Codigo',
+	'PDU_NOMBRE' => 'Nombre Producto',
+	'PDU_DESCRIPCION' => 'Descripción del Producto',
+	'PDU_IMAGENPRODU' => 'Imagen del Producto',
+	'PDU_STOCKMINIMO' => 'Stock Minimo',
+	'SUB_NOMBRECAT' => 'Categoria',
+	'SUB_UNIMEDIDA' => 'Unidad de Medida',
+	'SUB_TALLA' => 'Talla',
+	'SUB_GENERO' => 'Genero',
+	'SUB_ESTADO' => 'Estado del Producto',
+
+
+//Tabla: Proveedores
+	'PVE_ID' => 'codigo',
+	'PVE_NOMBRE' => 'Nombre Proveedor',
+	'PVE_DIRECCION' => 'Direccion del Proveedor',
+	'PVE_TELEFONO' => 'Telefono del Proveedor',
+	'PVE_CELULAR' => 'Celular Del Proveedor',
+	'PVE_EMAIL' => 'Email del Proveedor',
+
+
+//Tabla: Garantias
+	'GAR_ID' => 'Codigo',
+	'GAR_DESCRIPDEVO' => 'Descripcion del daño',
+	'GAR_CANTIDAD' => 'Cantidad de productos',
+	'GAR_FOTOESTADO' => 'Foto del producto',
+	'GAR_FECHASOLICI' => 'Gar_fechasolici',
+	'SUB_ESTADO' => 'Estado de solicitud',
+	'SUB_RESPUESTA' => 'Respuesta de solicitud',
+	'PDU_ID' => 'Codigo producto',
+	'FAC_ID' => 'Codigo factura',
+
+
+//Tabla: Comandos permisos
+	'COP_ID' => 'Codigo',
+	'COP_NOMBRE' => 'Nombre comando',
+
+
+//Tabla: Interfaz + comando
+	'ITC_ID' => 'Codigo',
+	'MUS_COMANPER_COP_ID' => 'Codigo del comando',
+	'MUS_INTERPERM_INP_ID' => 'Codigo de interfaz',
+
+
+//Tabla: Interfaz permisos
+	'INP_ID' => 'Codigo',
+	'INP_NOMBRE' => 'Nombre interfaz',
+
+
+//Tabla: Roles
+	'ROL_ID' => 'Codigo',
+	'ROL_NOMBRE' => 'Nombre del Rol',
+
+
+//Tabla: Rol + Interfaz + Comando
+	'RIC_ID' => 'Codigo',
+	'MUS_INTERFCOMAN_ITC_ID' => 'Codigo Interfaz/comando',
+	'MUS_ROLES_ROL_ID' => 'Codigo Rol',
+
+
+//Tabla: Usuarios
+	'USU_ID' => 'Codigo',
+	'USU_NOMBRE' => 'Nombre de Usuario',
+	'USU_APELLIDO' => 'Apellido de Usuario',
+	'USU_FECHA_NACI' => 'Fecha de Nacimiento',
+	'USU_DIRECCION' => 'Direccion de Usuario',
+	'USU_EMAIL' => 'Email de Usuario',
+	'USU_CELULAR' => 'Celular de Usuario',
+	'USU_CONTRASENA' => 'Contraseña de Usuario',
+	'SUB_SEXO' => 'Sexo de Usuario',
+	'ROL_ID' => 'Rol de Usuario',
+
+
+//Tabla: Facturas
+	'FAC_ID' => 'Codigo',
+	'FAC_FECHACOMPRA' => 'Fecha de Venta',
+	'FAC_TOTAL' => 'Total de Venta',
+	'SUB_TIPOPAGO' => 'Tipo de pago',
+	'USU_ID' => 'Codigo de Usuario',
+
+
+//Table: Detalles de factura
+	'FDE_ID' => 'Codigo Detalle de Factura',
+	'FDE_CANTIDAD' => 'Cantidad',
+	'FDE_PRECIOUNITA' => 'Precio -unitario',
+	'FAC_ID' => 'Codigo Factura',
+	'PDU_ID' => 'Codigo Producto',
+	'PPM_ID' => 'Codigo Promoción',
+
+
+//Tabla: SubDominios
+	'SUB_ID' => 'Codigo',
+	'DOMINIOS_DOM_ID' => 'Codigo Dominio',
+	'SUB_VALOR' => 'Posibles Valores',
+	'SUB_DESCRIPCION' => 'Descripción',
+	'SUB_AUX1' => 'Más Detalles',
+	'SUB_AUX2' => 'Más Detalles',
+); 
 ?>

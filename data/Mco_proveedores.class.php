@@ -62,8 +62,22 @@ function rollback($result)  {
   * @author SpyroFrameWork
   * @return int
   */
+  function existeEmailProveedor($PVE_EMAIL)  {
+    
+    $sql = "SELECT * FROM mco_proveedores WHERE PVE_EMAIL='$PVE_EMAIL'";
+    $this->consult = $this->connection->Execute($sql);
+    if ($this->consult->fields)
+     return 1;
+ }
+
+
+  /**
+  * Metodo para validar si un registro existe en la tabla: mco_proveedores
+  * @author SpyroFrameWork
+  * @return int
+  */
   function existMco_proveedores($PVE_ID)  {
-   $sql = "SELECT * FROM mco_proveedores WHERE PVE_ID=$PVE_ID";
+   $sql = "SELECT * FROM mco_proveedores WHERE PVE_ID='$PVE_ID'";
    $this->consult = $this->connection->Execute($sql);
    if ($this->consult->fields)
     return 1;

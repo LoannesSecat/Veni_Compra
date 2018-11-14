@@ -17,10 +17,10 @@
     require_once "Serializer.class.php";
 
     $Navigation_config = array(
-        'default_action' => 'CmdDefaultLogin', 
+        'default_action' => 'CmdDefaultHome', 
         'default_action_CHROME' => 'default_CHROME',
         'error_view' => 'CmdDefaultError',
-        'login_view' => 'Login',
+        'index_view' => 'index',
         'commands' => array(
     	//Comando por defecto de la aplicacion sino se invoca el action en el REQUEST
             'default' => array(
@@ -28,58 +28,100 @@
                 'validated' => 'false',
                 'views' => array(
                     'success' => array(
-                        'view' => 'Form_Wellcome.tpl',
+                        'view' => 'Form_index.tpl',
                         'redirect' => 0
                     )
                 )
             ),
 
-        //Comando por defecto ejemplo de uso de Smarty Engine
-            'CmdDefaultSample' => array(
-                'class' => 'CmdDefaultSample',
+            'CmdDefaultHome' => array( 
+                'class' => 'CmdDefaultMus',
                 'validated' => 'false',
                 'views' => array(
                     'success' => array(
-                        'view' => 'Form_Default_Sample.tpl',
+                        'view' => 'Form_index.tpl',
                         'redirect' => 0
                     )
                 )
-            ),
+            ),	
 
-        //Comando por defecto cuando no se esta usando Chrome
-            'default_CHROME' => array(
-                'class' => 'default_CHROME',
+            'CmdDefaultLogin' => array( 
+                'class' => 'CmdDefaultMus',
                 'validated' => 'false',
                 'views' => array(
                     'success' => array(
-                        'view' => 'Form_Default_Chrome.tpl',
-                        'redirect' => 0
-                    )
-                )
-            ),
-
-            'CmdDefaultHome' => array(
-                'class' => 'CmdDefaultHome',
-                'validated' => 'false',
-                'views' => array(
-                    'success' => array(
-                        'view' => 'Form_Dashboard.tpl',
+                        'view' => 'Form_iniciar.tpl',
                         'redirect' => 0
                     )
                 )
             ),		
 
-            'CmdDefaultLogin' => array(
-                'class' => 'CmdDefaultLogin',
+            'CmdDefaultAdmin' => array( 
+                'class' => 'CmdDefaultMus',
                 'validated' => 'false',
                 'views' => array(
                     'success' => array(
-                        'view' => 'Form_Login.tpl',
+                        'view' => 'Form_default_gestion.tpl',
                         'redirect' => 0
                     )
                 )
-            ),		
+            ),	
 
+            'CmdDefaultProv' => array( 
+                'class' => 'CmdDefaultMus',
+                'validated' => 'false',
+                'views' => array(
+                    'success' => array(
+                        'view' => 'Form_proveedor.tpl',
+                        'redirect' => 0
+                    )
+                )
+            ),
+
+            'CmdCrearProve' => array( 
+                'class' => 'CmdDefaultMus',
+                'validated' => 'false',
+                'views' => array(
+                    'success' => array(
+                        'view' => 'Form_crear_proveedor.tpl',
+                        'redirect' => 0
+                    ),
+                    'fail' => array(
+                        'view' => 'Form_crear_proveedor.tpl',
+                        'redirect' => 0
+                    )
+                )
+            ),
+
+            'CmdShowByIdProveedor' => array( 
+                'class' => 'CmdShowByIdProveedor',
+                'validated' => 'false',
+                'views' => array(
+                    'success' => array(
+                        'view' => 'Form_proveedor.tpl',
+                        'redirect' => 0
+                    ),
+                    'fail' => array(
+                        'view' => 'Form_proveedor.tpl',
+                        'redirect' => 0
+                    )
+                )
+            ),
+
+            'CmdDeleteProveedor' => array( 
+                'class' => 'CmdDeleteProveedor',
+                'validated' => 'false',
+                'views' => array(
+                    'success' => array(
+                        'view' => 'Form_proveedor.tpl',
+                        'redirect' => 0
+                    ),
+                    'fail' => array(
+                        'view' => 'Form_proveedor.tpl',
+                        'redirect' => 0
+                    )
+                )
+            ),
 
         // Desarrollado por Kevin Villa - Direccion de interfaz
             'CmdDefaultError' => array(
@@ -93,49 +135,7 @@
                     )
                 )
             ),		
-        // Desarrollado por Kevin Villa - Tabla: Usuario
-            'CmdLogin' => array(
-                'class' => 'CmdLogin',
-                'validated' => 'false',
-                'desc' => 'Inicio de sesion',
-                'views' => array(
-                    'success' => array(
-                        'view' => 'Form_HomeAdmin.tpl',
-                        'redirect' => 0
-                    ),
-                    'fail' => array(
-                        'view' => 'Form_Login.tpl',
-                        'redirect' => 0
-                    )
-                )
-            ),
-        // Desarrollado por Anderson Alban
-            'CmdRegister' => array(
-                'class' => 'CmdRegister',
-                'validated' => 'false',
-                'desc' => 'Adicionar un usuario',
-                'views' => array(
-                    'success' => array(
-                        'view' => 'Form_Login.tpl',
-                        'redirect' => 0
-                    ),
-                    'fail' => array(
-                        'view' => 'Form_Register.tpl',
-                        'redirect' => 0
-                    )
-                )
-            ),
 
-            'CmdDefaultRegister' => array(
-                'class' => 'CmdDefaultRegister',
-                'validated' => 'false',
-                'views' => array(
-                    'success' => array(
-                        'view' => 'Form_Register.tpl',
-                        'redirect' => 0
-                    )
-                )
-            )  
 	) // Fin arreglo de comandos	
 
 ); //Fin Arreglo Navigation_config
